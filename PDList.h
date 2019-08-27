@@ -42,16 +42,37 @@ public:
    /* YOU MAY ADD YOUR MODIFICATIONS HERE       */
    /*                                           */
 
-void addAt(PDPtr position, int i);
-PDList(PDList &p, int skip);
-bool containsCoordinateXY(int x, int y);
-void print();
-PDPtr getByCoordinate(int x, int y);
+    // constructor will create positions array of size length
+    PDList(int length);
+
+    // deep copy
+    PDList(PDList &other, int skip=0);
+
+    // grow array if list is initilaized without giving length integers
+    void growArray();
+
+    // add a position at index i
+    // This will overwrite any position on index i with the new one
+    void addAt(PDPtr position, int i);
+
+    // searches for position by giving coordinate
+    // returns true if found, otherwise false.
+    bool containsCoordinateXY(int x, int y);
+
+    // get position by giving coordinate
+    // returns PDPtr if found, nullptr otherwise
+    PDPtr getByCoordinate(int x, int y);
+
+    // will return the length of the list
+    int getLength();
+
+
    /* This is a suggestion of what you could use. */
    /* You can change this code.                   */
 private:
-   PDPtr    positions[100];
-   int      numPositions;
+  int       length;
+  PDPtr*    positions;
+  int       numPositions;
 
 
 };

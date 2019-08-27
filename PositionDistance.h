@@ -26,8 +26,12 @@ public:
    /*                                           */
 
    PositionDistance(int x, int y, int d);
-   void printMe();
+
+   // deep copy
+   PositionDistance(PositionDistance &other);
+
    ~PositionDistance();
+
  private:
    int x;
    int y;
