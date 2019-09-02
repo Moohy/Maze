@@ -4,7 +4,7 @@ This is a school assignment focuses on pointers usage and control in C/C++ langu
 # How it works
 A maze, initial and goal postions are given. The goal is to find the cheapest route from initial position to goal position.
 
-'=' is wall.
+'=' is wall.\n
 '~' is edge.
 '.' is route.
 
